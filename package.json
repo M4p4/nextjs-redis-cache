@@ -1,14 +1,35 @@
 {
   "name": "nextjs-redis-cache",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A Redis Cache for NextJs Framework that supports expiration after a given time and also compress the data in memory.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/M4p4/nextjs-redis-cache.git"
   },
   "author": "M4p4",
   "license": "ISC",
+  "keywords": [
+    "next-redis-cache",
+    "redis-cache",
+    "nextjs-cache",
+    "nextjs",
+    "typescript",
+    "nodejs-redis-cache"
+  ],
+  "homepage": "https://github.com/M4p4/nextjs-redis-cache#readme",
   "devDependencies": {
+    "@types/node": "^18.7.18",
     "typescript": "^4.8.3"
+  },
+  "dependencies": {
+    "@types/redis": "^4.0.11"
   }
 }
