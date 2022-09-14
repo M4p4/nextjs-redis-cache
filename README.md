@@ -18,11 +18,11 @@ import cache from 'nextjs-redis-cache';
 redisClient = createClient();
 
 // set
-// last param (options) is optional!
+// last param (options that also contain expireIn) is optional default is that it never expires!
 const data = { foo: 'bar' };
 await cache.set(redisClient, 'examplekey', data, { expireIn: 24 * 60 * 60 });
 
-// exits?
+// exists?
 // returns true or false
 await cache.exists(redisClient, 'examplekey');
 
