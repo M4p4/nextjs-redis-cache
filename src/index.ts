@@ -33,6 +33,10 @@ class RedisCache {
   get = async (client: RedisClientType, key: string): CacheGetType => {
     try {
       const res = await client.get(key);
+      if (!res) {
+        // return null
+        return res;
+      }
       const buf = Buffer.from(res, 'base64');
       const inflate = util.promisify(zlib.inflate);
       const decompressedData = await inflate(buf);

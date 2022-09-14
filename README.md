@@ -15,7 +15,7 @@ import cache from 'nextjs-redis-cache';
 
 // your redis client from redis package (createClient)
 // this should come from a singleton in your nextjs app!
-redisClient = createClient();
+const redisClient = createClient();
 
 // set
 // last param (options that also contain expireIn) is optional default is that it never expires!
@@ -24,11 +24,15 @@ await cache.set(redisClient, 'examplekey', data, { expireIn: 24 * 60 * 60 });
 
 // exists?
 // returns true or false
-await cache.exists(redisClient, 'examplekey');
+const res = await cache.exists(redisClient, 'examplekey');
 
 // get
 // returns decompressed and JSON.parsed object!
+// if there is non data for the given key it return null
 const loadedData = await cache.get(redisClient, 'examplekey');
+if (loadedData) {
+  //... you can also use exists function to be sure cache exists
+}
 
 // delete
 // delete array of keys
