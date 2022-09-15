@@ -1,7 +1,7 @@
 {
   "name": "nextjs-redis-cache",
-  "version": "1.0.3",
-  "description": "A Redis Cache for NextJs Framework that supports expiration after a given time and also compress the data in memory.",
+  "version": "1.0.4",
+  "description": "A Redis Cache for Next.js Framework that supports expiration after a given time and also compress the data in memory.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

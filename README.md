@@ -1,6 +1,6 @@
-# nextjs-redis-cache
+# Next.js Redis Cache
 
-A **Redis Cache** for **NextJs Framework** that supports expiration after a given time and also compress the data in memory. Perfect to speed up server side data collection even on a large scale.
+A **Redis Cache** for **Next.js Framework** that supports expiration after a given time and also compress the data in memory. Perfect to speed up server side data collection even on a large scale.
 
 ### Installation
 
@@ -14,7 +14,7 @@ npm install nextjs-redis-cache
 import cache from 'nextjs-redis-cache';
 
 // your redis client from redis package (createClient)
-// this should come from a singleton in your nextjs app!
+// this should come from a singleton in your Next.js app!
 const redisClient = createClient();
 
 // set
